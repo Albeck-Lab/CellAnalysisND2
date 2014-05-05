@@ -1,9 +1,9 @@
 CellAnalysisND2
 ===============
 
-READ_ME - CellAnalysisND2
-University of California - Davis
-Albeck Lab
+#####READ_ME - CellAnalysisND2
+#####University of California - Davis
+#####Albeck Lab
 
 	This software analyses an ND2 movie file and 	
 	tracks cells through time. The output contains	
