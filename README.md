@@ -95,18 +95,21 @@ Open this and look in the workspace for the matrix 'valcube'
 ***************************
 autourun.m		
 This script invokes the pipeline for cell analysis.
+
 	a.) Runs the scripts below in order
 	b.) Automatically partitions each initialized worker
 	c.) Output is ['data_xy' b '.mat'] where b is the xy
 
 bfopen2.m		
 This is a modified script that opens bioformat files.
+
 	a.) Open bioformat files in matlab such as nd2
 	b.) Loads a whole position (xy01) and its images (time and channels) into a matrix called mdata
 	c.) RAM intensive. Cannot open each image individually due to how it is coded.
 
 qteND2p.m		
 This script identifies cells based on a set of given parameters.
+
 	a.) Uses user input parameters(cell min/max diameter, circularity) to identify cell nuclei in each each image through time.
 		1. Uses a combination of image blurring, dilating, scoring, and contouring to identify cells the best.
 	b.) Records those cells' x and y coordinates in a matrix 'movieInfo' and passes this information to scripTrackgeneral
