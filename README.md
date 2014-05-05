@@ -93,29 +93,34 @@ Open this and look in the workspace for the matrix 'valcube'
 ***************************
 *Algorithms on Each Script*
 ***************************
-1. autourun.m		This script invokes the pipeline for cell analysis.
+autourun.m		
+This script invokes the pipeline for cell analysis.
 	a.) Runs the scripts below in order
 	b.) Automatically partitions each initialized worker
 	c.) Output is ['data_xy' b '.mat'] where b is the xy
 
-2. bfopen2.m		This is a modified script that opens bioformat files.
+bfopen2.m		
+This is a modified script that opens bioformat files.
 	a.) Open bioformat files in matlab such as nd2
 	b.) Loads a whole position (xy01) and its images (time and channels) into a matrix called mdata
 	c.) RAM intensive. Cannot open each image individually due to how it is coded.
 
-3. qteND2p.m		This script identifies cells based on a set of given parameters.
+qteND2p.m		
+This script identifies cells based on a set of given parameters.
 	a.) Uses user input parameters(cell min/max diameter, circularity) to identify cell nuclei in each each image through time.
 		1. Uses a combination of image blurring, dilating, scoring, and contouring to identify cells the best.
 	b.) Records those cells' x and y coordinates in a matrix 'movieInfo' and passes this information to scripTrackgeneral
 	c.) Can modify which channel this script uses to identify the cells. Change line 8 in autorun:
 		movieInfo{i} = qteND2p(slice,slices(i),2, maxDiam, minDiam, circularity,0); %default channel to use it 2
 
-4. scriptTrackgeneral.m	This modified script creates tracks of identified cells.
+scriptTrackgeneral.m	
+This modified script creates tracks of identified cells.
 	a.) This script uses movieInfo variable and generates tracks based on parameters
 	b.) Can modify track creation parameters by editing the script.
 	c.) Output is tracksFinal which houses the x and y coordinates of each cell and their associated tracks through time.
 
-5. ContourTrackND2p.m	This script grabs the nuclear and cytosolic intensity values from the tracked cells.
+ContourTrackND2p.m	
+This script grabs the nuclear and cytosolic intensity values from the tracked cells.
 	a.) This script uses tracksFinal and recapitulates each cell in a matrix valcube.
 		1. Uses contours to identify the cell nucleus.
 		2. Dilates from the cell nucleus and gets the cytosolic region this way.
