@@ -5,7 +5,7 @@ CellAnalysisND2
 #####University of California - Davis
 #####Albeck Lab
 
-	This software analyses an ND2 movie file and 	
+	This software analyzes an ND2 movie file and 	
 	tracks cells through time. The output contains	
 	intensities of the tracks in different channels	
 	as well as the ratios of those channels.
@@ -50,7 +50,7 @@ On the Command Prompt:
 - minDiam - minimum cell diameter for identification. Usu. 12-20
 - circularity - circularity for cell identification. Usu. 0-1. Closer to 1 the more circular
 - c1Background - Background values for the 1st channel. This is to get rid of noise in the output.
-- workers - The number of processors you want this job to take. More cores the more intensive it is on your computer, but the faster the output will come. Most computer have 4 cores. Matlab has one core for processing by default. This value adds extra workers. 3 workers = 4 cores.
+- workers - The number of processors you want this job to take. Using more processors will make this script run faster. 
 
 #####Sample invoke script: 
 
