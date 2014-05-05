@@ -1,20 +1,18 @@
 CellAnalysisND2
 ===============
 
-####################################
-# READ_ME - CellAnalysisND2
-# University of California - Davis
-# Albeck Lab
-#
-#########################################################
-#Cell Tracking and Analysis				#
-#	This software analyses an ND2 movie file and 	#
-#	tracks cells through time. The output contains	#
-#	intensities of the tracks in different channels	#
-#	as well as the ratios of those channels.	#
-#########################################################
+READ_ME - CellAnalysisND2
+University of California - Davis
+Albeck Lab
 
-Scripts
+
+#Cell Tracking and Analysis				
+This software analyses an ND2 movie file and 	
+tracks cells through time. The output contains	
+intensities of the tracks in different channels	
+as well as the ratios of those channels.
+
+*Scripts*
 -------
 1. autourun.m		This script invokes the pipeline for cell analysis.
 2. bfopen2.m		This is a modified script that opens bioformat files.
@@ -22,12 +20,12 @@ Scripts
 4. scriptTrackgeneral.m	This modified script creates tracks of identified cells.
 5. ContourTrackND2p.m	This script grabs the nuclear and cytosolic intensity values from the tracked cells.
 
-Packages used(included)
+*Packages used(included)*
 1. bfmatlab		Contains scripts to open bioformat files. (https://www.openmicroscopy.org/site/support/bio-formats5/users/matlab/)
 2. u-track_2.1.0	Containts scripts to track based on cell position. (http://lccb.hms.harvard.edu/software.html)
 
 
-Dependencies
+*Dependencies*
 ------------
 1. Matlab R2013A or newer
 2. ND2 file to analyze
@@ -35,7 +33,7 @@ Dependencies
 4. Scripts and files should be on the Matlab Path
 5. Initialized parallel environment (done by typing at command line: matlabpool local)
 
-To Invoke
+*To Invoke*
 ---------
 On the Command Prompt:
 matlabpool local	%You should see an icon on the bottom right corner with the numbers of worker initialized.
