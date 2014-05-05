@@ -43,17 +43,17 @@ autorun(file, positions, maxDiam, minDiam, circularity, c1Background, c2Backgrou
 
 Replace the variables as follows:
 
--file - file name in quotes. 'test.nd2'
+- file - file name in quotes. 'test.nd2'
 
--positions - the number of positions in the nd2 file. If xy 1-50, this field should be 50
+- positions - the number of positions in the nd2 file. If xy 1-50, this field should be 50
 
--maxDiam - maximum cell diamater for identification. Usu. 30-75
+- maxDiam - maximum cell diamater for identification. Usu. 30-75
+ 
+- minDiam - minimum cell diameter for identification. Usu. 12-20
 
--minDiam - minimum cell diameter for identification. Usu. 12-20
+- circularity - circularity for cell identification. Usu. 0-1. Closer to 1 the more circular
 
--circularity - circularity for cell identification. Usu. 0-1. Closer to 1 the more circular
-
--c1Background - Background values for the 1st channel. This is to get rid of noise in the output.
+- c1Background - Background values for the 1st channel. This is to get rid of noise in the output.
 
 -workers - The number of processors you want this job to take. More cores the more intensive it is on your computer, but the faster the output will come. Most computer have 4 cores. Matlab has one core for processing by default. This value adds extra workers. 3 workers = 4 cores.
 
