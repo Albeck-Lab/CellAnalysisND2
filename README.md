@@ -59,8 +59,7 @@ On the Command Prompt:
 
 #####See what your program is tracking:
 
-%Open first position
-
+	%Open first position
 	mdata = bfopen2(file,1);	%where file is in quotes 'test.nd2'
 	slice = mdata{i,1}(:,1);
 	slices = [1:size(slice,1)/3];
@@ -87,8 +86,9 @@ Open this and look in the workspace for the matrix 'valcube'
 	valcube(:,:,11) - 1st channel divided by 3rd channel cell track cytosolic intensity
 	valcube(:,:,12) - 1st channel divided by 3rd channel cell track nuclear intensity minus background
 
-To plot the tracks:
-figure, imagesc(valcube(:,:,9))	
+#####To plot the tracks:
+
+	figure, imagesc(valcube(:,:,9))	
 
 ***************************
 *Algorithms on Each Script*
