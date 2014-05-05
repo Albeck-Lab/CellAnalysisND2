@@ -118,12 +118,14 @@ This script identifies cells based on a set of given parameters.
 
 scriptTrackgeneral.m	
 This modified script creates tracks of identified cells.
+
 	a.) This script uses movieInfo variable and generates tracks based on parameters
 	b.) Can modify track creation parameters by editing the script.
 	c.) Output is tracksFinal which houses the x and y coordinates of each cell and their associated tracks through time.
 
 ContourTrackND2p.m	
 This script grabs the nuclear and cytosolic intensity values from the tracked cells.
+
 	a.) This script uses tracksFinal and recapitulates each cell in a matrix valcube.
 		1. Uses contours to identify the cell nucleus.
 		2. Dilates from the cell nucleus and gets the cytosolic region this way.
