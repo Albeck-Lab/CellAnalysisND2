@@ -5,10 +5,10 @@ READ_ME - CellAnalysisND2
 University of California - Davis
 Albeck Lab
 
-This software analyses an ND2 movie file and 	
-tracks cells through time. The output contains	
-intensities of the tracks in different channels	
-as well as the ratios of those channels.
+	This software analyses an ND2 movie file and 	
+	tracks cells through time. The output contains	
+	intensities of the tracks in different channels	
+	as well as the ratios of those channels.
 
 ********
 *Scripts*
@@ -57,7 +57,7 @@ On the Command Prompt:
 	matlabpool local		%initialize
 	autorun('test.nd2', 48, 100, 14, 0.6, 345, 200, 500, 3)
 
-#####See what your program is tracking:
+#####See what the program is tracking:
 
 	%Open first position
 	mdata = bfopen2(file,1);	%where file is in quotes 'test.nd2'
