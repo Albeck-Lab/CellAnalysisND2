@@ -43,37 +43,37 @@ autorun(file, positions, maxDiam, minDiam, circularity, c1Background, c2Backgrou
 
 Replace the variables as follows:
 
-file - file name in quotes. 'test.nd2'
+-file - file name in quotes. 'test.nd2'
 
-positions - the number of positions in the nd2 file. If xy 1-50, this field should be 50
+-positions - the number of positions in the nd2 file. If xy 1-50, this field should be 50
 
-maxDiam - maximum cell diamater for identification. Usu. 30-75
+-maxDiam - maximum cell diamater for identification. Usu. 30-75
 
-minDiam - minimum cell diameter for identification. Usu. 12-20
+-minDiam - minimum cell diameter for identification. Usu. 12-20
 
-circularity - circularity for cell identification. Usu. 0-1. Closer to 1 the more circular
+-circularity - circularity for cell identification. Usu. 0-1. Closer to 1 the more circular
 
-c1Background - Background values for the 1st channel. This is to get rid of noise in the output.
+-c1Background - Background values for the 1st channel. This is to get rid of noise in the output.
 
-workers - The number of processors you want this job to take. More cores the more intensive it is on your computer, but the faster the output will come. Most computer have 4 cores. Matlab has one core for processing by default. This value adds extra workers. 3 workers = 4 cores.
+-workers - The number of processors you want this job to take. More cores the more intensive it is on your computer, but the faster the output will come. Most computer have 4 cores. Matlab has one core for processing by default. This value adds extra workers. 3 workers = 4 cores.
 
 sample invoke script: 
 
-matlabpool local		%initialize
+-matlabpool local		%initialize
 
-autorun('test.nd2', 48, 100, 14, 0.6, 345, 200, 500, 3)
+-autorun('test.nd2', 48, 100, 14, 0.6, 345, 200, 500, 3)
 
-See what your program is tracking:
+-See what your program is tracking:
 
 %Open first position
 
-mdata = bfopen2(file,1);	%where file is in quotes 'test.nd2'
+-mdata = bfopen2(file,1);	%where file is in quotes 'test.nd2'
 
-slice = mdata{i,1}(:,1);
+-slice = mdata{i,1}(:,1);
 
-slices = [1:size(slice,1)/3];
+-slices = [1:size(slice,1)/3];
 
-movieInfo = qteND2(mdata,2,maxDiam,minDiam,circularity,1); %Replace the variables with your best guess and adjust according.
+-movieInfo = qteND2(mdata,2,maxDiam,minDiam,circularity,1); %Replace the variables with your best guess and adjust according.
 
 ********
 *Output*
