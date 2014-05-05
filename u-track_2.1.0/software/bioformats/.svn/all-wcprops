@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/lccb/matlab/!svn/ver/10033/projects/extern/main/bioformats
+END
+bfCheckJavaPath.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/lccb/matlab/!svn/ver/10033/projects/extern/main/bioformats/bfCheckJavaPath.m
+END
+bfsave.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/lccb/matlab/!svn/ver/10033/projects/extern/main/bioformats/bfsave.m
+END
+loci_tools.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/lccb/matlab/!svn/ver/10033/projects/extern/main/bioformats/loci_tools.jar
+END
+bfGetFileExtensions.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/lccb/matlab/!svn/ver/10033/projects/extern/main/bioformats/bfGetFileExtensions.m
+END
+bfGetPlane.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/lccb/matlab/!svn/ver/10033/projects/extern/main/bioformats/bfGetPlane.m
+END
+bfOpen3DVolume.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/lccb/matlab/!svn/ver/10033/projects/extern/main/bioformats/bfOpen3DVolume.m
+END
+bfopen.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/lccb/matlab/!svn/ver/10033/projects/extern/main/bioformats/bfopen.m
+END
+bfGetReader.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/lccb/matlab/!svn/ver/10033/projects/extern/main/bioformats/bfGetReader.m
+END
+bfUpgradeCheck.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/lccb/matlab/!svn/ver/10033/projects/extern/main/bioformats/bfUpgradeCheck.m
+END
