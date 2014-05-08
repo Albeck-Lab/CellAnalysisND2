@@ -66,12 +66,28 @@ On the Command Prompt:
 	slices = [1:size(slice,1)/3];
 	movieInfo = qteND2(mdata,2,maxDiam,minDiam,circularity,1); %Replace the variables with your best guess and adjust according.
 	
-#####Using the tester file with correct parameters:
-	%Open first position
-	mdata = bfopen2('test',1);	
+#####Step by step of using this program through the tester file: "test_crop.nd2"
+	%The input on the command prompt is as follows:
+	autorun(file, positions, maxDiam, minDiam, circularity, c1Background, c2Background, c3Background, workers)
+	file = 'test_crop.nd2'
+	%We have to get the number of positions. Opening the tester file reveals that it has one M (or multipoint)
+	positions=1
+	%Now we need to get the right parameters for cell identification
+	%We can use imagej to get maxDiam and minDiam as well as the c1-c3 backgrounds using the box tool and measure tool.
+	%To get the background, select an a dark area on the image that is not the cell. Press M to get the background mean intensity and record it. This tester file has 3 channels. Use virtual Stack and split the channels when opening this nd2 file in imageJ.
+	c1Background = 707
+	c2Background = 150
+	c3Background = 165
+	%Once you get the min and max diam and have a good idea of how circular you want your cells to be, we can check how well your parameters identified the cells by running below. (These parameters are chosen by me for the tester file)
+	
+	mdata = bfopen2('test_crop.nd2',1);	%If you want a different position (M), change the 1 here to the position number	
 	slice = mdata{i,1}(:,1);
 	slices = [1:size(slice,1)/3];
-	movieInfo = qteND2(mdata,2,30,18,.6,1); 
+	movieInfo = qteND2(mdata,2,30,18,.6,1);	%channel to use is 2, maxDiam=30, minDiam=18, circularity=.6, diagnostic=1 (to invoke movie)
+	%You can cancel the movie creation anytime by doing cntrl+c on the matlab command window
+	%The number workers of to use all processors of a quad core computer is 3 (matlab uses 1 by default + 3 extra you add = 4 for quadcore)
+	%Modify the parameters as you see fit. Once you are happy with the results type on the command prompt:
+	autorun('test_crop.nd2', 1, 30, 18, .6, 707, 150, 165, 3)
 	
 	
 ********
