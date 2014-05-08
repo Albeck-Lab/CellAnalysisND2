@@ -79,7 +79,6 @@ On the Command Prompt:
 	c2Background = 150
 	c3Background = 165
 	%Once you get the min and max diam and have a good idea of how circular you want your cells to be, we can check how well your parameters identified the cells by running below. (These parameters are chosen by me for the tester file)
-	
 	mdata = bfopen2('test_crop.nd2',1);	%If you want a different position (M), change the 1 here to the position number	
 	slice = mdata{i,1}(:,1);
 	slices = [1:size(slice,1)/3];
@@ -88,6 +87,7 @@ On the Command Prompt:
 	%The number workers of to use all processors of a quad core computer is 3 (matlab uses 1 by default + 3 extra you add = 4 for quadcore)
 	%Modify the parameters as you see fit. Once you are happy with the results type on the command prompt:
 	autorun('test_crop.nd2', 1, 30, 18, .6, 707, 150, 165, 3)
+	%To view the cell tracks and their nuc/cyto intensities for each channel, refer to the output section below.
 	
 	
 ********
