@@ -57,14 +57,23 @@ On the Command Prompt:
 	matlabpool local		%initialize
 	autorun('test.nd2', 48, 100, 14, 0.6, 345, 200, 500, 3)
 
-#####See what the program is tracking:
+#####To vissually see what the program is tracking based on your parameters:
 
 	%Open first position
-	mdata = bfopen2(file,1);	%where file is in quotes 'test.nd2'
+	i=1
+	mdata = bfopen2(file,i);	%where file is in quotes 'test.nd2'
 	slice = mdata{i,1}(:,1);
 	slices = [1:size(slice,1)/3];
 	movieInfo = qteND2(mdata,2,maxDiam,minDiam,circularity,1); %Replace the variables with your best guess and adjust according.
-
+	
+#####Using the tester file with correct parameters:
+	%Open first position
+	mdata = bfopen2('test',1);	
+	slice = mdata{i,1}(:,1);
+	slices = [1:size(slice,1)/3];
+	movieInfo = qteND2(mdata,2,30,18,.6,1); 
+	
+	
 ********
 *Output*
 ********
