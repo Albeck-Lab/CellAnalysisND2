@@ -57,7 +57,7 @@ On the Command Prompt:
 	matlabpool local		%initialize
 	autorun('test.nd2', 48, 100, 14, 0.6, 345, 200, 500, 3)
 
-#####To vissually see what the program is tracking based on your parameters:
+#####To visually see what the program is tracking based on your parameters:
 
 	%Open first position
 	i=1
