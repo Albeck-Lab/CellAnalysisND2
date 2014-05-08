@@ -66,7 +66,7 @@ On the Command Prompt:
 	slices = [1:size(slice,1)/3];
 	movieInfo = qteND2(mdata,2,maxDiam,minDiam,circularity,1); %Replace the variables with your best guess and adjust according.
 	
-#####Step by step of using this program through the tester file: "test_crop.nd2"
+#####Step by step of using this program with the tester file: "test_crop.nd2"
 	%The input on the command prompt is as follows:
 	autorun(file, positions, maxDiam, minDiam, circularity, c1Background, c2Background, c3Background, workers)
 	file = 'test_crop.nd2'
